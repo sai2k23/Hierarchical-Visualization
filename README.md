@@ -49,40 +49,53 @@ Common chart types for hierarchical visualization are:
 ```bash
 git clone https://github.com/sai2k23/Hierarchical-Visualization.git
 cd Hierarchical-Visualization
-2. Install Dependencies
-bash
-Copy code
+```
+
+### 2. Install Dependencies
+
+```bash
 npm install
-3. Start MongoDB
+```
+
+### 3. Start MongoDB
+
 Ensure MongoDB is running locally at:
 
-arduino
-Copy code
+```
 mongodb://localhost:27017
-The default database name used is visualization.
+```
 
-4. Seed Database
+The default database name used is **visualization**.
+
+### 4. Seed Database
+
 Run the seed script to populate the org chart data:
 
-bash
-Copy code
+```bash
 node seed.js
+```
+
 This will insert a sample CEO → CTO/CFO/COO hierarchy into MongoDB.
 
-5. Run Server
+### 5. Run Server
+
 Start the Express server:
 
-bash
-Copy code
+```bash
 node server.js
-Then open in browser:
-http://localhost:3000/tree.html
+```
 
-📊 Sample Data
+Then open in browser:
+
+👉 [http://localhost:3000/tree.html](http://localhost:3000/tree.html)
+
+---
+
+## 📊 Sample Data
+
 The following nested JSON is seeded into MongoDB:
 
-json
-Copy code
+```json
 {
   "name": "CEO",
   "children": [
@@ -114,18 +127,21 @@ Copy code
     }
   ]
 }
-📸 Output
-Org Chart rendered in browser using D3.js.
+```
 
-Displays CEO at root node with child nodes.
+---
 
-(Insert screenshot here)
+## 📸 Output
 
-📝 Learnings
-Connected MongoDB with Express using Mongoose.
+- Org Chart rendered in browser using **D3.js**.  
+- Displays CEO at root node with child nodes.  
+- *(Insert screenshot here)*  
 
-Seeded hierarchical (nested) JSON into MongoDB.
+---
 
-Served data through an API and visualized with D3.js.
+## 📝 Learnings
 
-Learned difference between temporal (time-based) vs hierarchical (nested) visualization.
+- Connected **MongoDB** with **Express** using Mongoose.  
+- Seeded hierarchical (nested) JSON into MongoDB.  
+- Served data through an API and visualized with **D3.js**.  
+- Learned difference between **temporal (time-based)** vs **hierarchical (nested)** visualization.  
